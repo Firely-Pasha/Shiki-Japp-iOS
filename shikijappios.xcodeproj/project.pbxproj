@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C07A0F70245471820031509A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F6F245471820031509A /* AppDelegate.swift */; };
+		C07A0F72245471820031509A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F71245471820031509A /* SceneDelegate.swift */; };
+		C07A0F74245471820031509A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F73245471820031509A /* ContentView.swift */; };
+		C07A0F76245471870031509A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07A0F75245471870031509A /* Assets.xcassets */; };
+		C07A0F79245471870031509A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C07A0F78245471870031509A /* Preview Assets.xcassets */; };
+		C07A0F7C245471870031509A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07A0F7A245471870031509A /* LaunchScreen.storyboard */; };
+		C07A0F87245471870031509A /* shikijappiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F86245471870031509A /* shikijappiosTests.swift */; };
+		C07A0F92245471870031509A /* shikijappiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F91245471870031509A /* shikijappiosUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C07A0F83245471870031509A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C07A0F64245471820031509A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C07A0F6B245471820031509A;
+			remoteInfo = shikijappios;
+		};
+		C07A0F8E245471870031509A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C07A0F64245471820031509A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C07A0F6B245471820031509A;
+			remoteInfo = shikijappios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C07A0F6C245471820031509A /* shikijappios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shikijappios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07A0F6F245471820031509A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C07A0F71245471820031509A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C07A0F73245471820031509A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C07A0F75245471870031509A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C07A0F78245471870031509A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C07A0F7B245471870031509A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C07A0F7D245471870031509A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07A0F82245471870031509A /* shikijappiosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shikijappiosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07A0F86245471870031509A /* shikijappiosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shikijappiosTests.swift; sourceTree = "<group>"; };
+		C07A0F88245471870031509A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07A0F8D245471870031509A /* shikijappiosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shikijappiosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C07A0F91245471870031509A /* shikijappiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shikijappiosUITests.swift; sourceTree = "<group>"; };
+		C07A0F93245471870031509A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C07A0F69245471820031509A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07A0F7F245471870031509A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07A0F8A245471870031509A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C07A0F63245471820031509A = {
+			isa = PBXGroup;
+			children = (
+				C07A0F6E245471820031509A /* shikijappios */,
+				C07A0F85245471870031509A /* shikijappiosTests */,
+				C07A0F90245471870031509A /* shikijappiosUITests */,
+				C07A0F6D245471820031509A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C07A0F6D245471820031509A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C07A0F6C245471820031509A /* shikijappios.app */,
+				C07A0F82245471870031509A /* shikijappiosTests.xctest */,
+				C07A0F8D245471870031509A /* shikijappiosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C07A0F6E245471820031509A /* shikijappios */ = {
+			isa = PBXGroup;
+			children = (
+				C07A0F6F245471820031509A /* AppDelegate.swift */,
+				C07A0F71245471820031509A /* SceneDelegate.swift */,
+				C07A0F73245471820031509A /* ContentView.swift */,
+				C07A0F75245471870031509A /* Assets.xcassets */,
+				C07A0F7A245471870031509A /* LaunchScreen.storyboard */,
+				C07A0F7D245471870031509A /* Info.plist */,
+				C07A0F77245471870031509A /* Preview Content */,
+			);
+			path = shikijappios;
+			sourceTree = "<group>";
+		};
+		C07A0F77245471870031509A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C07A0F78245471870031509A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C07A0F85245471870031509A /* shikijappiosTests */ = {
+			isa = PBXGroup;
+			children = (
+				C07A0F86245471870031509A /* shikijappiosTests.swift */,
+				C07A0F88245471870031509A /* Info.plist */,
+			);
+			path = shikijappiosTests;
+			sourceTree = "<group>";
+		};
+		C07A0F90245471870031509A /* shikijappiosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C07A0F91245471870031509A /* shikijappiosUITests.swift */,
+				C07A0F93245471870031509A /* Info.plist */,
+			);
+			path = shikijappiosUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C07A0F6B245471820031509A /* shikijappios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C07A0F96245471870031509A /* Build configuration list for PBXNativeTarget "shikijappios" */;
+			buildPhases = (
+				C07A0F68245471820031509A /* Sources */,
+				C07A0F69245471820031509A /* Frameworks */,
+				C07A0F6A245471820031509A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shikijappios;
+			productName = shikijappios;
+			productReference = C07A0F6C245471820031509A /* shikijappios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C07A0F81245471870031509A /* shikijappiosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C07A0F99245471870031509A /* Build configuration list for PBXNativeTarget "shikijappiosTests" */;
+			buildPhases = (
+				C07A0F7E245471870031509A /* Sources */,
+				C07A0F7F245471870031509A /* Frameworks */,
+				C07A0F80245471870031509A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C07A0F84245471870031509A /* PBXTargetDependency */,
+			);
+			name = shikijappiosTests;
+			productName = shikijappiosTests;
+			productReference = C07A0F82245471870031509A /* shikijappiosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C07A0F8C245471870031509A /* shikijappiosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C07A0F9C245471870031509A /* Build configuration list for PBXNativeTarget "shikijappiosUITests" */;
+			buildPhases = (
+				C07A0F89245471870031509A /* Sources */,
+				C07A0F8A245471870031509A /* Frameworks */,
+				C07A0F8B245471870031509A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C07A0F8F245471870031509A /* PBXTargetDependency */,
+			);
+			name = shikijappiosUITests;
+			productName = shikijappiosUITests;
+			productReference = C07A0F8D245471870031509A /* shikijappiosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C07A0F64245471820031509A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Pagala Co";
+				TargetAttributes = {
+					C07A0F6B245471820031509A = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					C07A0F81245471870031509A = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = C07A0F6B245471820031509A;
+					};
+					C07A0F8C245471870031509A = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = C07A0F6B245471820031509A;
+					};
+				};
+			};
+			buildConfigurationList = C07A0F67245471820031509A /* Build configuration list for PBXProject "shikijappios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C07A0F63245471820031509A;
+			productRefGroup = C07A0F6D245471820031509A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C07A0F6B245471820031509A /* shikijappios */,
+				C07A0F81245471870031509A /* shikijappiosTests */,
+				C07A0F8C245471870031509A /* shikijappiosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C07A0F6A245471820031509A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07A0F7C245471870031509A /* LaunchScreen.storyboard in Resources */,
+				C07A0F79245471870031509A /* Preview Assets.xcassets in Resources */,
+				C07A0F76245471870031509A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07A0F80245471870031509A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07A0F8B245471870031509A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C07A0F68245471820031509A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07A0F70245471820031509A /* AppDelegate.swift in Sources */,
+				C07A0F72245471820031509A /* SceneDelegate.swift in Sources */,
+				C07A0F74245471820031509A /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07A0F7E245471870031509A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07A0F87245471870031509A /* shikijappiosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C07A0F89245471870031509A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C07A0F92245471870031509A /* shikijappiosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C07A0F84245471870031509A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C07A0F6B245471820031509A /* shikijappios */;
+			targetProxy = C07A0F83245471870031509A /* PBXContainerItemProxy */;
+		};
+		C07A0F8F245471870031509A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C07A0F6B245471820031509A /* shikijappios */;
+			targetProxy = C07A0F8E245471870031509A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C07A0F7A245471870031509A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C07A0F7B245471870031509A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C07A0F94245471870031509A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C07A0F95245471870031509A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C07A0F97245471870031509A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"shikijappios/Preview Content\"";
+				DEVELOPMENT_TEAM = KNPB7AA56F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = shikijappios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.pagala.shikijappios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C07A0F98245471870031509A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"shikijappios/Preview Content\"";
+				DEVELOPMENT_TEAM = KNPB7AA56F;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = shikijappios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.pagala.shikijappios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C07A0F9A245471870031509A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KNPB7AA56F;
+				INFOPLIST_FILE = shikijappiosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.pagala.shikijappiosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shikijappios.app/shikijappios";
+			};
+			name = Debug;
+		};
+		C07A0F9B245471870031509A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KNPB7AA56F;
+				INFOPLIST_FILE = shikijappiosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.pagala.shikijappiosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shikijappios.app/shikijappios";
+			};
+			name = Release;
+		};
+		C07A0F9D245471870031509A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KNPB7AA56F;
+				INFOPLIST_FILE = shikijappiosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.pagala.shikijappiosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = shikijappios;
+			};
+			name = Debug;
+		};
+		C07A0F9E245471870031509A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KNPB7AA56F;
+				INFOPLIST_FILE = shikijappiosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.pagala.shikijappiosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = shikijappios;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C07A0F67245471820031509A /* Build configuration list for PBXProject "shikijappios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07A0F94245471870031509A /* Debug */,
+				C07A0F95245471870031509A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C07A0F96245471870031509A /* Build configuration list for PBXNativeTarget "shikijappios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07A0F97245471870031509A /* Debug */,
+				C07A0F98245471870031509A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C07A0F99245471870031509A /* Build configuration list for PBXNativeTarget "shikijappiosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07A0F9A245471870031509A /* Debug */,
+				C07A0F9B245471870031509A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C07A0F9C245471870031509A /* Build configuration list for PBXNativeTarget "shikijappiosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C07A0F9D245471870031509A /* Debug */,
+				C07A0F9E245471870031509A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C07A0F64245471820031509A /* Project object */;
+}
