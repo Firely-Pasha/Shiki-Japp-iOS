@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C066D9262454D4B3009F30C8 /* ShikiModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D9252454D4B3009F30C8 /* ShikiModels.swift */; };
+		C066D9282454D4C2009F30C8 /* ShikiApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D9272454D4C2009F30C8 /* ShikiApi.swift */; };
+		C066D92B2454DBD2009F30C8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C066D92A2454DBD2009F30C8 /* Alamofire */; };
+		C066D92D2454E14E009F30C8 /* ShikiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D92C2454E14E009F30C8 /* ShikiParams.swift */; };
+		C066D9302454EBA7009F30C8 /* GridStack in Frameworks */ = {isa = PBXBuildFile; productRef = C066D92F2454EBA7009F30C8 /* GridStack */; };
+		C066D9342454EEA7009F30C8 /* TitleCatalogItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D9332454EEA7009F30C8 /* TitleCatalogItemView.swift */; };
+		C066D93624550819009F30C8 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D93524550819009F30C8 /* TitleView.swift */; };
+		C066D93A2455B7A3009F30C8 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D9392455B7A3009F30C8 /* VisualEffectView.swift */; };
 		C07A0F70245471820031509A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F6F245471820031509A /* AppDelegate.swift */; };
 		C07A0F72245471820031509A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F71245471820031509A /* SceneDelegate.swift */; };
 		C07A0F74245471820031509A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F73245471820031509A /* ContentView.swift */; };
@@ -15,6 +23,10 @@
 		C07A0F7C245471870031509A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C07A0F7A245471870031509A /* LaunchScreen.storyboard */; };
 		C07A0F87245471870031509A /* shikijappiosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F86245471870031509A /* shikijappiosTests.swift */; };
 		C07A0F92245471870031509A /* shikijappiosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0F91245471870031509A /* shikijappiosUITests.swift */; };
+		C07A0FA12454728B0031509A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C07A0FA02454728B0031509A /* Kingfisher */; };
+		C07A0FA32454728B0031509A /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = C07A0FA22454728B0031509A /* KingfisherSwiftUI */; };
+		C07A0FA7245476D50031509A /* ShikiTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0FA6245476D50031509A /* ShikiTabView.swift */; };
+		C07A0FAB245476FF0031509A /* TitleCatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07A0FAA245476FF0031509A /* TitleCatalogView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +47,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C07A0F6C245471820031509A /* shikijappios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shikijappios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C066D9252454D4B3009F30C8 /* ShikiModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiModels.swift; sourceTree = "<group>"; };
+		C066D9272454D4C2009F30C8 /* ShikiApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiApi.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		C066D92C2454E14E009F30C8 /* ShikiParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiParams.swift; sourceTree = "<group>"; };
+		C066D9332454EEA7009F30C8 /* TitleCatalogItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCatalogItemView.swift; sourceTree = "<group>"; };
+		C066D93524550819009F30C8 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		C066D9392455B7A3009F30C8 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		C07A0F6C245471820031509A /* Shiki Japp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shiki Japp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07A0F6F245471820031509A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C07A0F71245471820031509A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C07A0F73245471820031509A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +67,8 @@
 		C07A0F8D245471870031509A /* shikijappiosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shikijappiosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07A0F91245471870031509A /* shikijappiosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shikijappiosUITests.swift; sourceTree = "<group>"; };
 		C07A0F93245471870031509A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C07A0FA6245476D50031509A /* ShikiTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiTabView.swift; sourceTree = "<group>"; };
+		C07A0FAA245476FF0031509A /* TitleCatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCatalogView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C066D92B2454DBD2009F30C8 /* Alamofire in Frameworks */,
+				C066D9302454EBA7009F30C8 /* GridStack in Frameworks */,
+				C07A0FA32454728B0031509A /* KingfisherSwiftUI in Frameworks */,
+				C07A0FA12454728B0031509A /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +100,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C066D9232454D48F009F30C8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C066D9242454D499009F30C8 /* ShikimoriApi */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C066D9242454D499009F30C8 /* ShikimoriApi */ = {
+			isa = PBXGroup;
+			children = (
+				C066D9252454D4B3009F30C8 /* ShikiModels.swift */,
+				C066D9272454D4C2009F30C8 /* ShikiApi.swift */,
+				C066D92C2454E14E009F30C8 /* ShikiParams.swift */,
+			);
+			path = ShikimoriApi;
+			sourceTree = "<group>";
+		};
 		C07A0F63245471820031509A = {
 			isa = PBXGroup;
 			children = (
@@ -89,7 +131,7 @@
 		C07A0F6D245471820031509A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C07A0F6C245471820031509A /* shikijappios.app */,
+				C07A0F6C245471820031509A /* Shiki Japp.app */,
 				C07A0F82245471870031509A /* shikijappiosTests.xctest */,
 				C07A0F8D245471870031509A /* shikijappiosUITests.xctest */,
 			);
@@ -99,6 +141,8 @@
 		C07A0F6E245471820031509A /* shikijappios */ = {
 			isa = PBXGroup;
 			children = (
+				C066D9232454D48F009F30C8 /* Data */,
+				C07A0FA42454756E0031509A /* UI */,
 				C07A0F6F245471820031509A /* AppDelegate.swift */,
 				C07A0F71245471820031509A /* SceneDelegate.swift */,
 				C07A0F73245471820031509A /* ContentView.swift */,
@@ -136,6 +180,18 @@
 			path = shikijappiosUITests;
 			sourceTree = "<group>";
 		};
+		C07A0FA42454756E0031509A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C07A0FA6245476D50031509A /* ShikiTabView.swift */,
+				C07A0FAA245476FF0031509A /* TitleCatalogView.swift */,
+				C066D9332454EEA7009F30C8 /* TitleCatalogItemView.swift */,
+				C066D93524550819009F30C8 /* TitleView.swift */,
+				C066D9392455B7A3009F30C8 /* VisualEffectView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,8 +208,14 @@
 			dependencies = (
 			);
 			name = shikijappios;
+			packageProductDependencies = (
+				C07A0FA02454728B0031509A /* Kingfisher */,
+				C07A0FA22454728B0031509A /* KingfisherSwiftUI */,
+				C066D92A2454DBD2009F30C8 /* Alamofire */,
+				C066D92F2454EBA7009F30C8 /* GridStack */,
+			);
 			productName = shikijappios;
-			productReference = C07A0F6C245471820031509A /* shikijappios.app */;
+			productReference = C07A0F6C245471820031509A /* Shiki Japp.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C07A0F81245471870031509A /* shikijappiosTests */ = {
@@ -224,6 +286,11 @@
 				Base,
 			);
 			mainGroup = C07A0F63245471820031509A;
+			packageReferences = (
+				C07A0F9F2454728B0031509A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				C066D9292454DBD2009F30C8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C066D92E2454EBA7009F30C8 /* XCRemoteSwiftPackageReference "GridStack" */,
+			);
 			productRefGroup = C07A0F6D245471820031509A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,8 +335,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C07A0F70245471820031509A /* AppDelegate.swift in Sources */,
+				C066D9282454D4C2009F30C8 /* ShikiApi.swift in Sources */,
+				C066D9262454D4B3009F30C8 /* ShikiModels.swift in Sources */,
 				C07A0F72245471820031509A /* SceneDelegate.swift in Sources */,
+				C066D9342454EEA7009F30C8 /* TitleCatalogItemView.swift in Sources */,
+				C07A0FAB245476FF0031509A /* TitleCatalogView.swift in Sources */,
+				C066D93A2455B7A3009F30C8 /* VisualEffectView.swift in Sources */,
+				C07A0FA7245476D50031509A /* ShikiTabView.swift in Sources */,
+				C066D93624550819009F30C8 /* TitleView.swift in Sources */,
 				C07A0F74245471820031509A /* ContentView.swift in Sources */,
+				C066D92D2454E14E009F30C8 /* ShikiParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +519,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.pagala.shikijappios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Shiki Japp";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,7 +539,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.pagala.shikijappios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Shiki Japp";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -594,6 +669,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C066D9292454DBD2009F30C8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+		C066D92E2454EBA7009F30C8 /* XCRemoteSwiftPackageReference "GridStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:pietropizzi/GridStack.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+		C07A0F9F2454728B0031509A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C066D92A2454DBD2009F30C8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C066D9292454DBD2009F30C8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C066D92F2454EBA7009F30C8 /* GridStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C066D92E2454EBA7009F30C8 /* XCRemoteSwiftPackageReference "GridStack" */;
+			productName = GridStack;
+		};
+		C07A0FA02454728B0031509A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C07A0F9F2454728B0031509A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		C07A0FA22454728B0031509A /* KingfisherSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C07A0F9F2454728B0031509A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = KingfisherSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C07A0F64245471820031509A /* Project object */;
 }
