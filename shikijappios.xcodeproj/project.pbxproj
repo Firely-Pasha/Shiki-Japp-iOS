@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C038CD56245C4F1300B993DE /* ShikiProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038CD55245C4F1300B993DE /* ShikiProtocols.swift */; };
+		C038CD58245C539E00B993DE /* ShikiEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038CD57245C539E00B993DE /* ShikiEnums.swift */; };
 		C066D9262454D4B3009F30C8 /* ShikiModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D9252454D4B3009F30C8 /* ShikiModels.swift */; };
 		C066D9282454D4C2009F30C8 /* ShikiApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D9272454D4C2009F30C8 /* ShikiApi.swift */; };
 		C066D92B2454DBD2009F30C8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C066D92A2454DBD2009F30C8 /* Alamofire */; };
@@ -47,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C038CD55245C4F1300B993DE /* ShikiProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiProtocols.swift; sourceTree = "<group>"; };
+		C038CD57245C539E00B993DE /* ShikiEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiEnums.swift; sourceTree = "<group>"; };
 		C066D9252454D4B3009F30C8 /* ShikiModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiModels.swift; sourceTree = "<group>"; };
 		C066D9272454D4C2009F30C8 /* ShikiApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiApi.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		C066D92C2454E14E009F30C8 /* ShikiParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiParams.swift; sourceTree = "<group>"; };
@@ -112,8 +116,10 @@
 			isa = PBXGroup;
 			children = (
 				C066D9252454D4B3009F30C8 /* ShikiModels.swift */,
+				C038CD55245C4F1300B993DE /* ShikiProtocols.swift */,
 				C066D9272454D4C2009F30C8 /* ShikiApi.swift */,
 				C066D92C2454E14E009F30C8 /* ShikiParams.swift */,
+				C038CD57245C539E00B993DE /* ShikiEnums.swift */,
 			);
 			path = ShikimoriApi;
 			sourceTree = "<group>";
@@ -338,8 +344,10 @@
 				C066D9282454D4C2009F30C8 /* ShikiApi.swift in Sources */,
 				C066D9262454D4B3009F30C8 /* ShikiModels.swift in Sources */,
 				C07A0F72245471820031509A /* SceneDelegate.swift in Sources */,
+				C038CD56245C4F1300B993DE /* ShikiProtocols.swift in Sources */,
 				C066D9342454EEA7009F30C8 /* TitleCatalogItemView.swift in Sources */,
 				C07A0FAB245476FF0031509A /* TitleCatalogView.swift in Sources */,
+				C038CD58245C539E00B993DE /* ShikiEnums.swift in Sources */,
 				C066D93A2455B7A3009F30C8 /* VisualEffectView.swift in Sources */,
 				C07A0FA7245476D50031509A /* ShikiTabView.swift in Sources */,
 				C066D93624550819009F30C8 /* TitleView.swift in Sources */,

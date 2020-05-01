@@ -27,10 +27,10 @@ class ShikimoriApi {
         return ShikimoriApi.siteUrl + path
     }
     
-    func getAnimes(params: AnimesParams, completion: @escaping ([AnimeModel]) -> ()) {
+    func getAnimes(params: AnimesParams, completion: @escaping ([Anime]) -> ()) {
         AF.request(ShikimoriApi.apiUrl + "/animes", parameters: params, encoder: URLEncodedFormParameterEncoder(destination: .methodDependent), headers: headers).validate().responseJSON { response in
             let animes = try! self.decoder.decode([AnimeModel].self, from: response.data!)
-            completion(animes)
+            completion(animes as [Anime])
         }
     }
     

@@ -8,25 +8,39 @@
 
 import Foundation
 
-class AnimeModel: Codable, Identifiable {
-    var id: Int
+struct AnimeModel: Anime, Codable {
+    public var id: Int
     var name: String
     var score: String
-    var image: ImageModel
-}
-
-struct AnimeInfoModel: Equatable, Codable, Identifiable {
-    static func == (lhs: AnimeInfoModel, rhs: AnimeInfoModel) -> Bool {
-        return true
-    }
+    var image: ShikiImageModel
+    var aired_on: String?
+    var released_on: String?
+    var status: TitleStatus
     
-    var id: Int
-    var name: String
-    var score: String
-    var image: ImageModel
+    var kind: AnimeKind
+    var episodes: Int
+    var episodes_aired: Int?
 }
 
-struct ImageModel: Codable {
+struct AnimeInfoModel: AnimeInfo, Codable {    
+    public var id: Int
+    var name: String
+    var score: String
+    var image: ShikiImageModel
+    var aired_on: String?
+    var released_on: String?
+    var status: TitleStatus
+    
+    var kind: AnimeKind
+    var episodes: Int
+    var episodes_aired: Int?
+    
+    var duration: Int?
+    
+    var description: String?
+}
+
+struct ShikiImageModel: ShikiImage, Codable {
     var original: String
     var preview: String
     var x96: String

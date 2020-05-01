@@ -10,7 +10,7 @@ import SwiftUI
 import KingfisherSwiftUI
 
 struct TitleCatalogItemView: View {
-    @State var anime: AnimeModel
+    @State var anime: Anime
     
     var body: some View {
         NavigationLink(destination: TitleView(animeId: self.anime.id, title: self.anime.name)) {
