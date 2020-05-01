@@ -13,7 +13,11 @@ import GridStack
 struct TitleCatalogView: View {
     @State var animes: [Anime] = []
     @State var isBottomSheetOpen = false;
+    @State private var offset = CGSize.zero
+    private let modalHeight: CGFloat = 260
     
+    @Environment(\.colorScheme) var colorScheme
+
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
@@ -60,7 +64,11 @@ struct TitleCatalogView: View {
                         }
                         if (self.isBottomSheetOpen) {
                             ZStack {
-                                Color.black
+                                if (self.colorScheme == .dark) {
+                                    Color.black
+                                } else {
+                                    Color.white
+                                }
                                 VStack {
                                     Button(action: {
                                         self.isBottomSheetOpen = false
@@ -84,8 +92,14 @@ struct TitleCatalogView: View {
                                 }
                                 .padding(.bottom, geometry.safeAreaInsets.bottom)
                             }
+                            .offset(y: self.offset.height)
+                            .gesture(
+                              DragGesture()
+                                .onChanged { value in self.onChangedDragValueGesture(value) }
+                                .onEnded { value in self.onEndedDragValueGesture(value) }
+                            )
                             .transition(.move(edge: .bottom))
-                            .frame(height: 260)
+                                .frame(height: self.modalHeight)
                             .zIndex(3)
                         }
                     }
@@ -102,6 +116,23 @@ struct TitleCatalogView: View {
                 self.animes = animes;
             }
         }
+    }
+    
+    private func onChangedDragValueGesture(_ value: DragGesture.Value) {
+      guard value.translation.height > 0 else { return }
+      self.offset = value.translation
+    }
+
+    private func onEndedDragValueGesture(_ value: DragGesture.Value) {
+      guard value.translation.height >= self.modalHeight / 2 else {
+        self.offset = CGSize.zero
+        return
+      }
+
+      withAnimation {
+        self.isBottomSheetOpen = !self.isBottomSheetOpen
+        self.offset = CGSize.zero
+      }
     }
 }
 
