@@ -12,7 +12,8 @@ import GridStack
 
 struct TitleCatalogView: View {
     @State var animes: [Anime] = []
-    @State var isBottomSheetOpen = false;
+    @State var isTitleTypeSheetOpen = false;
+    @State var isFilterSheetOpen = false;
     @State private var offset = CGSize.zero
     private let modalHeight: CGFloat = 260
     
@@ -32,7 +33,7 @@ struct TitleCatalogView: View {
                 .navigationBarItems(
                     leading: HStack {
                         Button(action: {
-                            self.isBottomSheetOpen = !self.isBottomSheetOpen;
+                            self.isTitleTypeSheetOpen = !self.isTitleTypeSheetOpen
                         }) {
                             Image("menu")
                                 .resizable()
@@ -41,7 +42,7 @@ struct TitleCatalogView: View {
                     },
                     trailing: HStack {
                         Button(action: {
-                            
+                            self.isFilterSheetOpen = true
                         }) {
                             Image("TitleSearch")
                                 .resizable()
@@ -51,9 +52,9 @@ struct TitleCatalogView: View {
                 )
                 GeometryReader() { geometry in
                     ZStack(alignment: .bottom) {
-                        if (self.isBottomSheetOpen) {
+                        if (self.isTitleTypeSheetOpen) {
                             Button(action: {
-                                self.isBottomSheetOpen = false
+                                self.isTitleTypeSheetOpen = false
                             }) {
                                 Color.black
                                     .opacity(0.5)
@@ -62,7 +63,7 @@ struct TitleCatalogView: View {
                                     .edgesIgnoringSafeArea(.top)
                             }
                         }
-                        if (self.isBottomSheetOpen) {
+                        if (self.isTitleTypeSheetOpen) {
                             ZStack {
                                 if (self.colorScheme == .dark) {
                                     Color.black
@@ -71,19 +72,19 @@ struct TitleCatalogView: View {
                                 }
                                 VStack {
                                     Button(action: {
-                                        self.isBottomSheetOpen = false
+                                        self.isTitleTypeSheetOpen = false
                                     }) {
                                         Text("Anime")
                                     }
                                     .padding(10)
                                     Button(action: {
-                                        self.isBottomSheetOpen = false
+                                        self.isTitleTypeSheetOpen = false
                                     }) {
                                         Text("Manga")
                                     }
                                     .padding(10)
                                     Button(action: {
-                                        self.isBottomSheetOpen = false
+                                        self.isTitleTypeSheetOpen = false
                                     }) {
                                         Text("Ranobe")
                                     }
@@ -109,7 +110,9 @@ struct TitleCatalogView: View {
                     .animation(.default)
                     .zIndex(1)
             }
-            
+        }
+        .sheet(isPresented: $isFilterSheetOpen) {
+            TitleCatalogFilter()
         }
         .onAppear {
             shikimoriApi.getAnimes(params: AnimesParams()) { (animes) in
@@ -130,7 +133,7 @@ struct TitleCatalogView: View {
       }
 
       withAnimation {
-        self.isBottomSheetOpen = !self.isBottomSheetOpen
+        self.isTitleTypeSheetOpen = !self.isTitleTypeSheetOpen
         self.offset = CGSize.zero
       }
     }

@@ -13,6 +13,7 @@ enum AnimeKind: String, Codable {
     case movie
     case special
     case ona
+    case ova
     
     func getString() -> String {
         switch self {

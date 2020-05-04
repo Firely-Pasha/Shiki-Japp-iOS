@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C02FB76F24604F5F00C0962E /* TitleCatalogFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02FB76E24604F5F00C0962E /* TitleCatalogFilter.swift */; };
 		C038CD56245C4F1300B993DE /* ShikiProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038CD55245C4F1300B993DE /* ShikiProtocols.swift */; };
 		C038CD58245C539E00B993DE /* ShikiEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038CD57245C539E00B993DE /* ShikiEnums.swift */; };
 		C066D9262454D4B3009F30C8 /* ShikiModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D9252454D4B3009F30C8 /* ShikiModels.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C02FB76E24604F5F00C0962E /* TitleCatalogFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCatalogFilter.swift; sourceTree = "<group>"; };
 		C038CD55245C4F1300B993DE /* ShikiProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiProtocols.swift; sourceTree = "<group>"; };
 		C038CD57245C539E00B993DE /* ShikiEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiEnums.swift; sourceTree = "<group>"; };
 		C066D9252454D4B3009F30C8 /* ShikiModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShikiModels.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				C066D9332454EEA7009F30C8 /* TitleCatalogItemView.swift */,
 				C066D93524550819009F30C8 /* TitleView.swift */,
 				C066D9392455B7A3009F30C8 /* VisualEffectView.swift */,
+				C02FB76E24604F5F00C0962E /* TitleCatalogFilter.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			files = (
 				C07A0F70245471820031509A /* AppDelegate.swift in Sources */,
 				C066D9282454D4C2009F30C8 /* ShikiApi.swift in Sources */,
+				C02FB76F24604F5F00C0962E /* TitleCatalogFilter.swift in Sources */,
 				C066D9262454D4B3009F30C8 /* ShikiModels.swift in Sources */,
 				C07A0F72245471820031509A /* SceneDelegate.swift in Sources */,
 				C038CD56245C4F1300B993DE /* ShikiProtocols.swift in Sources */,
