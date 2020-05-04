@@ -83,7 +83,7 @@ struct TitleMainInfoView : View {
                                 Text(self.anime.kind.getString())
                                     .font(.system(size: 20))
                                     .bold()
-                                if self.anime.duration != nil {
+                                if self.anime.duration != nil && self.anime.duration != 0 {
                                     Text("\(self.anime.duration!) min.")
                                         .font(.system(size: 20))
                                 }
@@ -122,18 +122,22 @@ struct TitleViewScoreView: View {
     var anime: AnimeInfo
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
-            Text("Score")
-                .font(.title)
-            
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Users: \(anime.score)")
-                        .font(.body)
+        VStack {
+            if (anime.status != TitleStatus.anons) {
+                VStack(alignment: .leading, spacing: 5) {
+                    Text("Score")
+                        .font(.title)
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("Users: \(anime.score)")
+                                .font(.body)
+                        }
+                    }
                 }
+                .padding(.horizontal, 25)
             }
         }
-        .padding(.horizontal, 25)
     }
 }
 
