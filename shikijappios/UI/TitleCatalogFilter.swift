@@ -16,8 +16,9 @@ struct TitleCatalogFilter: View {
     
     @ObservedObject var titleStatus: CollectionParameter<TitleStatus>
     @ObservedObject var animeKind: CollectionParameter<AnimeKind>
+    @ObservedObject var animeRating: CollectionParameter<AnimeRating>
     
-    @Binding var kek: String
+    var onApplyFilter: () -> ()
     
     var body: some View {
         NavigationView {
@@ -41,13 +42,13 @@ struct TitleCatalogFilter: View {
                             CheckboxView(title: "Special", parameters: animeKind, value: .special)
                             CheckboxView(title: "Music", parameters: animeKind, value: .music)
                         }
-//                        Section(header: Text("Rating")) {
-//                            CheckboxView(title: "G")
-//                            CheckboxView(title: "PG")
-//                            CheckboxView(title: "PG-13")
-//                            CheckboxView(title: "R-17")
-//                            CheckboxView(title: "R+")
-//                        }
+                        Section(header: Text("Rating")) {
+                            CheckboxView(title: "G", parameters: animeRating, value: .g)
+                            CheckboxView(title: "PG", parameters: animeRating, value: .pg)
+                            CheckboxView(title: "PG-13", parameters: animeRating, value: .pg_13)
+                            CheckboxView(title: "R", parameters: animeRating, value: .r)
+                            CheckboxView(title: "R+", parameters: animeRating, value: .r_plus)
+                        }
                     }
                 }
             }
@@ -56,7 +57,6 @@ struct TitleCatalogFilter: View {
             .navigationBarItems(
                 leading: HStack {
                     Button(action: {
-                        self.kek = self.kek + "k"
                         self.titleStatus.clear()
                         self.animeKind.clear()
                     }) {
@@ -68,6 +68,7 @@ struct TitleCatalogFilter: View {
                 },
                 trailing: HStack {
                     Button(action: {
+                        self.onApplyFilter()
                         self.isFilterVisible = false
                     }) {
                         Image("apply")

@@ -21,19 +21,19 @@ class CollectionParameter<T: Hashable>: ObservableObject {
     func addInclude(item: T) {
         exclude.remove(item)
         include.insert(item)
-        updateAll()
+        objectWillChange.send()
     }
     
     func addExclude(item: T) {
         exclude.insert(item)
         include.remove(item)
-        updateAll()
+        objectWillChange.send()
     }
     
     func remove(item: T) {
         exclude.remove(item)
         include.remove(item)
-        updateAll()
+        objectWillChange.send()
     }
     
     func contains(item: T) -> Bool {
@@ -51,20 +51,5 @@ class CollectionParameter<T: Hashable>: ObservableObject {
     func clear() {
         include = Set()
         exclude = Set()
-    }
-    
-    private func updateAll() {
-        updateInclude()
-        updateExclude()
-    }
-    
-    private func updateInclude() {
-        var lol = include
-        include = lol
-    }
-    
-    private func updateExclude() {
-        var lol = include
-        include = lol
     }
 }

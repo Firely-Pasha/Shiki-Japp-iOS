@@ -20,11 +20,10 @@ struct TitleCatalogView: View {
     @State private var offset = CGSize.zero
     private let modalHeight: CGFloat = 260
     
-    @State var titleStatus = CollectionParameter<TitleStatus>()
-    @State var animeKind = CollectionParameter<AnimeKind>()
-    
-    @State var kek = "K"
-    
+    @ObservedObject var titleStatus = CollectionParameter<TitleStatus>()
+    @ObservedObject var animeKind = CollectionParameter<AnimeKind>()
+    @ObservedObject var animeRating = CollectionParameter<AnimeRating>()
+        
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
@@ -122,8 +121,12 @@ struct TitleCatalogView: View {
                 isFilterVisible: self.$isFilterSheetOpen,
                 titleStatus: self.titleStatus,
                 animeKind: self.animeKind,
-                kek: self.$kek
-            )
+                animeRating: self.animeRating
+            ) {
+                shikimoriApi.getAnimes(params: AnimesParams(limit: 20)) { (animes) in
+                    self.animes = animes;
+                }
+            }
         }
         .onAppear {
             shikimoriApi.getAnimes(params: AnimesParams()) { (animes) in

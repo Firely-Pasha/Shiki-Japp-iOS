@@ -46,3 +46,12 @@ enum AnimeKind: String, Codable {
         }
     }
 }
+
+enum AnimeRating: String, Codable {
+    case g
+    case pg
+    case pg_13
+    case r
+    case r_plus
+    case rx
+}
