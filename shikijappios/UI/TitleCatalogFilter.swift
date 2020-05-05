@@ -7,92 +7,131 @@
 //
 
 import SwiftUI
+import ActivityIndicatorView
 
 struct TitleCatalogFilter: View {
-    var body: some View {
-        NavigationView {
-            Form {
-                Section(header: Text("Status")) {
-                    CheckboxView(title: "Anons")
-                    CheckboxView(title: "Ongoing")
-                    CheckboxView(title: "Release")
-                }
-                Section(header: Text("Type")) {
-                    CheckboxView(title: "TV Series")
-                    CheckboxView(title: "Film")
-                    CheckboxView(title: "Ova")
-                    CheckboxView(title: "Ona")
-                    CheckboxView(title: "Special")
-                    CheckboxView(title: "Music")
-                }
-                Section(header: Text("Rating")) {
-                    CheckboxView(title: "G")
-                    CheckboxView(title: "PG")
-                    CheckboxView(title: "PG-13")
-                    CheckboxView(title: "R-17")
-                    CheckboxView(title: "R+")
-                }
-            }
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
-            .navigationBarTitle("Filters")
-            .navigationBarItems(trailing: HStack {
-                Button(action: {
-                    
-                }) {
-                    Image("apply")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                }
-                .foregroundColor(Color.purple)
-            })
-        }
-    }
-}
-
-struct TitleCatalogFliterCheckBox: View {
-    var title: String
-    var value: TitleStatus
-    @State var isOn = false
+    
+    @Binding var isFilterVisible: Bool
+    @State var isIndicatorVisible = true
+    
+    @ObservedObject var titleStatus: CollectionParameter<TitleStatus>
+    @ObservedObject var animeKind: CollectionParameter<AnimeKind>
+    
+    @Binding var kek: String
     
     var body: some View {
-        Toggle(isOn: $isOn) {
-            HStack {
-                Image("menu")
-                    .resizable()
-                    .frame(width: 30, height: 30)
-
-                Text("LOL")
+        NavigationView {
+            VStack {
+                if (isIndicatorVisible) {
+                    ActivityIndicatorView(isVisible: $isIndicatorVisible, type: .default)
+                        .frame(width: 25.0, height: 25.0, alignment: .center)
+                        .foregroundColor(Color.purple)
+                } else {
+                    Form {
+                        Section(header: Text("Status")) {
+                            CheckboxView<TitleStatus>(title: "Anons", parameters: titleStatus, value: .anons)
+                            CheckboxView<TitleStatus>(title: "Ongoing", parameters: titleStatus, value: .ongoing)
+                            CheckboxView<TitleStatus>(title: "Release", parameters: titleStatus, value: .released)
+                        }
+                        Section(header: Text("Type")) {
+                            CheckboxView(title: "TV Series", parameters: animeKind, value: .tv)
+                            CheckboxView(title: "Film", parameters: animeKind, value: .movie)
+                            CheckboxView(title: "Ova", parameters: animeKind, value: .ova)
+                            CheckboxView(title: "Ona", parameters: animeKind, value: .ona)
+                            CheckboxView(title: "Special", parameters: animeKind, value: .special)
+                            CheckboxView(title: "Music", parameters: animeKind, value: .music)
+                        }
+//                        Section(header: Text("Rating")) {
+//                            CheckboxView(title: "G")
+//                            CheckboxView(title: "PG")
+//                            CheckboxView(title: "PG-13")
+//                            CheckboxView(title: "R-17")
+//                            CheckboxView(title: "R+")
+//                        }
+                    }
+                }
+            }
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .navigationBarTitle("Filters")
+            .navigationBarItems(
+                leading: HStack {
+                    Button(action: {
+                        self.kek = self.kek + "k"
+                        self.titleStatus.clear()
+                        self.animeKind.clear()
+                    }) {
+                        Image("clearFilter")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                    }
+                    .foregroundColor(Color.purple)
+                },
+                trailing: HStack {
+                    Button(action: {
+                        self.isFilterVisible = false
+                    }) {
+                        Image("apply")
+                            .resizable()
+                            .frame(width: 25, height: 25)
+                    }
+                    .foregroundColor(Color.purple)
+                }
+            )
+            .onAppear {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.isIndicatorVisible = false
+                }
             }
         }
     }
 }
 
-struct CheckboxView : View {
-
+struct CheckboxView<T: Hashable> : View {
+    
     var title: String
-    @State var checkState: Int = 0;
-
+    @ObservedObject var parameters: CollectionParameter<T>
+    var value: T
+    
     var body: some View {
-
+        
         Button(action: {
-            self.checkState = (self.checkState + 1) % 3
+            let checkState = (self.getState() + 1) % 3
+            if (checkState == 0) {
+                self.parameters.remove(item: self.value)
+            } else if (checkState == 1) {
+                self.parameters.addInclude(item: self.value)
+            } else if (checkState == 2) {
+                self.parameters.addExclude(item: self.value)
+            }
         }) {
             HStack(alignment: .center, spacing: 10) {
-                Image(self.checkState == 0 ? "checkboxEmpty" : (self.checkState == 1 ? "checkboxAdd" : "checkboxRemove"))
+                Image(self.getState() == 0 ? "checkboxEmpty" : (self.getState() == 1 ? "checkboxAdd" : "checkboxRemove"))
                     .resizable()
-                    .foregroundColor(self.checkState == 0 ? Color.black : (self.checkState == 1 ? Color.green : Color.red))
-                    .frame(width: 30, height: 30, alignment: .center)
+                    .foregroundColor(self.getState() == 0 ? Color.black : (self.getState() == 1 ? Color.green : Color.red))
+                    .frame(width: 25, height: 25, alignment: .center)
                 
                 Text(self.title)
                     .foregroundColor(.primary)
             }
         }
-
+        .onAppear {
+        }
+        
     }
-
-}
-struct TitleCatalogFilter_Previews: PreviewProvider {
-    static var previews: some View {
-        TitleCatalogFilter()
+    
+    private func getState() -> Int {
+        if (self.parameters.containsInclude(item: self.value)) {
+            return 1
+        } else if (self.parameters.containsExclude(item: self.value)) {
+            return 2
+        } else {
+            return 0
+        }
     }
+    
 }
+//struct TitleCatalogFilter_Previews: PreviewProvider {
+//    static var previews: some View {
+////        TitleCatalogFilter(isFilterVisible: Binding(false))
+//    }
+//}

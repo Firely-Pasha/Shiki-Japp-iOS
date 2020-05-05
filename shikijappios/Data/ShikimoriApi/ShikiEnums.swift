@@ -8,25 +8,6 @@
 
 import Foundation
 
-enum AnimeKind: String, Codable {
-    case tv
-    case movie
-    case special
-    case ona
-    case ova
-    
-    func getString() -> String {
-        switch self {
-        case .tv:
-            return "TV Series"
-        case .movie:
-            return "Movie"
-        default:
-            return "Unknown"
-        }
-    }
-}
-
 enum TitleStatus: String, Codable {
     case anons
     case ongoing
@@ -44,5 +25,24 @@ enum TitleStatus: String, Codable {
             return "Unknown"
         }
     }
+}
 
+enum AnimeKind: String, Codable {
+    case tv
+    case movie
+    case special
+    case ona
+    case ova
+    case music
+    
+    func getString() -> String {
+        switch self {
+        case .tv:
+            return "TV Series"
+        case .movie:
+            return "Movie"
+        default:
+            return "Unknown"
+        }
+    }
 }

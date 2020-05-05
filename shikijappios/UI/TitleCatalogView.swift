@@ -11,14 +11,20 @@ import KingfisherSwiftUI
 import GridStack
 
 struct TitleCatalogView: View {
+    
+    @Environment(\.colorScheme) var colorScheme
+    
     @State var animes: [Anime] = []
     @State var isTitleTypeSheetOpen = false;
     @State var isFilterSheetOpen = false;
     @State private var offset = CGSize.zero
     private let modalHeight: CGFloat = 260
     
-    @Environment(\.colorScheme) var colorScheme
-
+    @State var titleStatus = CollectionParameter<TitleStatus>()
+    @State var animeKind = CollectionParameter<AnimeKind>()
+    
+    @State var kek = "K"
+    
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
@@ -29,7 +35,7 @@ struct TitleCatalogView: View {
                 ) { index, cellWidth in
                     TitleCatalogItemView(anime: self.animes[index])
                 }
-                .navigationBarTitle("Anime catalog")
+                .navigationBarTitle("Anime")
                 .navigationBarItems(
                     leading: HStack {
                         Button(action: {
@@ -37,16 +43,16 @@ struct TitleCatalogView: View {
                         }) {
                             Image("menu")
                                 .resizable()
-                                .frame(width: 30, height: 30)
+                                .frame(width: 25, height: 25)
                         }
                     },
                     trailing: HStack {
                         Button(action: {
                             self.isFilterSheetOpen = true
                         }) {
-                            Image("TitleSearch")
+                            Image("filter")
                                 .resizable()
-                                .frame(width: 30, height: 30)
+                                .frame(width: 25, height: 25)
                         }
                     }
                 )
@@ -112,7 +118,12 @@ struct TitleCatalogView: View {
             }
         }
         .sheet(isPresented: $isFilterSheetOpen) {
-            TitleCatalogFilter()
+            TitleCatalogFilter(
+                isFilterVisible: self.$isFilterSheetOpen,
+                titleStatus: self.titleStatus,
+                animeKind: self.animeKind,
+                kek: self.$kek
+            )
         }
         .onAppear {
             shikimoriApi.getAnimes(params: AnimesParams()) { (animes) in

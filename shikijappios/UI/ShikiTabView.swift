@@ -12,37 +12,37 @@ struct ShikiTabView: View {
     @State private var selection = 1
     
     var body: some View {
-        TabView(selection: $selection) {
-            Text("Profile")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("Profile")
-                    }
-            }
-            .tag(0)
-            TitleCatalogView()
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("second")
-                            .colorInvert()
-                        Text("Catalog")
-                    }
-            }
-            .tag(1)
-            Text("Settings")
-                .font(.title)
-                .tabItem {
-                    VStack {
-                        Image("second")
-                        Text("Settings")
-                    }
-            }
-            .tag(2)
-        }
-        
+//        TabView(selection: $selection) {
+//            Text("Profile")
+//                .font(.title)
+//                .tabItem {
+//                    VStack {
+//                        Image("first")
+//                        Text("Profile")
+//                    }
+//            }
+//            .tag(0)
+//                .font(.title)
+//                .tabItem {
+//                    VStack {
+//                        Image("second")
+//                            .colorInvert()
+//                        Text("Catalog")
+//                    }
+//            }
+//            .tag(1)
+//            Text("Settings")
+//                .font(.title)
+//                .tabItem {
+//                    VStack {
+//                        Image("second")
+//                        Text("Settings")
+//                    }
+//            }
+//            .tag(2)
+//        }
+        TitleCatalogView()
+
     }
 }
 
