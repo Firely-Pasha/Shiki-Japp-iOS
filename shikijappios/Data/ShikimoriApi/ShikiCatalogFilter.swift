@@ -18,6 +18,8 @@ class CollectionParameter<T: Hashable>: ObservableObject {
     @Published private var include = Set<T>()
     @Published private var exclude = Set<T>()
     
+    typealias sed = T
+    
     func addInclude(item: T) {
         exclude.remove(item)
         include.insert(item)
@@ -51,5 +53,35 @@ class CollectionParameter<T: Hashable>: ObservableObject {
     func clear() {
         include = Set()
         exclude = Set()
+    }
+    
+    func toString() -> String {
+        var string = ""
+        for idx in include.indices {
+            if (idx != include.startIndex) {
+                if include[idx] is ShikiEnum {
+                    string += "," + (include[idx] as! ShikiEnum).getCode()
+                }
+            } else {
+                if include[idx] is ShikiEnum {
+                    string += (include[idx] as! ShikiEnum).getCode()
+                }
+            }
+        }
+        for idx in exclude.indices {
+            if (idx != exclude.startIndex) {
+                if exclude[idx] is ShikiEnum {
+                    string += ",!" + (exclude[idx] as! ShikiEnum).getCode()
+                }
+            } else {
+                if (!include.isEmpty) {
+                    string += ","
+                }
+                if exclude[idx] is ShikiEnum {
+                    string += "!" + (exclude[idx] as! ShikiEnum).getCode()
+                }
+            }
+        }
+        return string
     }
 }

@@ -27,10 +27,20 @@ class ShikimoriApi {
         return ShikimoriApi.siteUrl + path
     }
     
-    func getAnimes(params: AnimesParams, completion: @escaping ([Anime]) -> ()) {
-        AF.request(ShikimoriApi.apiUrl + "/animes", parameters: params, encoder: URLEncodedFormParameterEncoder(destination: .methodDependent), headers: headers).validate().responseJSON { response in
+    func getAnimes(params: AnimesParams, completion: @escaping ([AnimeModel]) -> ()) {
+        var url = "/animes?";
+        url += "&status=" + params.status
+        url += "&kind=" + params.kind
+        url += "&rating=" + params.rating
+        if (params.limit != 0) {
+            url += "&limit=\(params.limit)"
+        }
+        AF.request(ShikimoriApi.apiUrl + url, headers: headers).validate().responseJSON { response in
+            print(response.request?.url?.absoluteString)
+            print(String(data: response.data!, encoding: .utf8))
+
             let animes = try! self.decoder.decode([AnimeModel].self, from: response.data!)
-            completion(animes as [Anime])
+            completion(animes)
         }
     }
     

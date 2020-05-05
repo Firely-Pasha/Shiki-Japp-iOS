@@ -11,4 +11,7 @@ import Foundation
 struct AnimesParams: Encodable {
     var limit = 10
     var page = 1
+    var status = ""
+    var kind = ""
+    var rating = ""
 }

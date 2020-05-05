@@ -59,6 +59,7 @@ struct TitleCatalogFilter: View {
                     Button(action: {
                         self.titleStatus.clear()
                         self.animeKind.clear()
+                        self.animeRating.clear()
                     }) {
                         Image("clearFilter")
                             .resizable()

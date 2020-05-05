@@ -10,6 +10,7 @@
 		C02FB76F24604F5F00C0962E /* TitleCatalogFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02FB76E24604F5F00C0962E /* TitleCatalogFilter.swift */; };
 		C02FB7722460B4CD00C0962E /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = C02FB7712460B4CD00C0962E /* ActivityIndicatorView */; };
 		C02FB7742460C37000C0962E /* ShikiCatalogFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02FB7732460C37000C0962E /* ShikiCatalogFilter.swift */; };
+		C02FB7772461C72200C0962E /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = C02FB7762461C72200C0962E /* QGrid */; };
 		C038CD56245C4F1300B993DE /* ShikiProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038CD55245C4F1300B993DE /* ShikiProtocols.swift */; };
 		C038CD58245C539E00B993DE /* ShikiEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C038CD57245C539E00B993DE /* ShikiEnums.swift */; };
 		C066D9262454D4B3009F30C8 /* ShikiModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C066D9252454D4B3009F30C8 /* ShikiModels.swift */; };
@@ -85,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02FB7772461C72200C0962E /* QGrid in Frameworks */,
 				C02FB7722460B4CD00C0962E /* ActivityIndicatorView in Frameworks */,
 				C066D92B2454DBD2009F30C8 /* Alamofire in Frameworks */,
 				C066D9302454EBA7009F30C8 /* GridStack in Frameworks */,
@@ -228,6 +230,7 @@
 				C066D92A2454DBD2009F30C8 /* Alamofire */,
 				C066D92F2454EBA7009F30C8 /* GridStack */,
 				C02FB7712460B4CD00C0962E /* ActivityIndicatorView */,
+				C02FB7762461C72200C0962E /* QGrid */,
 			);
 			productName = shikijappios;
 			productReference = C07A0F6C245471820031509A /* Shiki Japp.app */;
@@ -306,6 +309,7 @@
 				C066D9292454DBD2009F30C8 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C066D92E2454EBA7009F30C8 /* XCRemoteSwiftPackageReference "GridStack" */,
 				C02FB7702460B4CD00C0962E /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+				C02FB7752461C72200C0962E /* XCRemoteSwiftPackageReference "QGrid" */,
 			);
 			productRefGroup = C07A0F6D245471820031509A /* Products */;
 			projectDirPath = "";
@@ -699,6 +703,14 @@
 				minimumVersion = 0.0.2;
 			};
 		};
+		C02FB7752461C72200C0962E /* XCRemoteSwiftPackageReference "QGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:Q-Mobile/QGrid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
 		C066D9292454DBD2009F30C8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:Alamofire/Alamofire.git";
@@ -730,6 +742,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C02FB7702460B4CD00C0962E /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
 			productName = ActivityIndicatorView;
+		};
+		C02FB7762461C72200C0962E /* QGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C02FB7752461C72200C0962E /* XCRemoteSwiftPackageReference "QGrid" */;
+			productName = QGrid;
 		};
 		C066D92A2454DBD2009F30C8 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;

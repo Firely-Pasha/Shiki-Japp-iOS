@@ -8,7 +8,11 @@
 
 import Foundation
 
-enum TitleStatus: String, Codable {
+protocol ShikiEnum: Codable {    
+    func getCode() -> String
+}
+
+enum TitleStatus: String, ShikiEnum {
     case anons
     case ongoing
     case released
@@ -25,9 +29,13 @@ enum TitleStatus: String, Codable {
             return "Unknown"
         }
     }
+    
+    func getCode() -> String {
+        return self.rawValue
+    }
 }
 
-enum AnimeKind: String, Codable {
+enum AnimeKind: String, ShikiEnum {
     case tv
     case movie
     case special
@@ -45,13 +53,21 @@ enum AnimeKind: String, Codable {
             return "Unknown"
         }
     }
+    
+    func getCode() -> String {
+        return self.rawValue
+    }
 }
 
-enum AnimeRating: String, Codable {
+enum AnimeRating: String, ShikiEnum {
     case g
     case pg
     case pg_13
     case r
     case r_plus
     case rx
+    
+    func getCode() -> String {
+        return self.rawValue
+    }
 }

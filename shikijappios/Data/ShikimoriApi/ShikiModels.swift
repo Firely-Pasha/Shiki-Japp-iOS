@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AnimeModel: Anime, Codable {
+struct AnimeModel: Anime, Codable, Identifiable {
     public var id: Int
     var name: String
     var score: String

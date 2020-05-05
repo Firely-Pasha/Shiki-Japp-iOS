@@ -23,7 +23,7 @@ struct TitleCatalogView: View {
     @ObservedObject var titleStatus = CollectionParameter<TitleStatus>()
     @ObservedObject var animeKind = CollectionParameter<AnimeKind>()
     @ObservedObject var animeRating = CollectionParameter<AnimeRating>()
-        
+    
     var body: some View {
         NavigationView {
             ZStack(alignment: .bottom) {
@@ -34,6 +34,7 @@ struct TitleCatalogView: View {
                 ) { index, cellWidth in
                     TitleCatalogItemView(anime: self.animes[index])
                 }
+                .id(UUID())
                 .navigationBarTitle("Anime")
                 .navigationBarItems(
                     leading: HStack {
@@ -100,13 +101,13 @@ struct TitleCatalogView: View {
                             }
                             .offset(y: self.offset.height)
                             .gesture(
-                              DragGesture()
-                                .onChanged { value in self.onChangedDragValueGesture(value) }
-                                .onEnded { value in self.onEndedDragValueGesture(value) }
+                                DragGesture()
+                                    .onChanged { value in self.onChangedDragValueGesture(value) }
+                                    .onEnded { value in self.onEndedDragValueGesture(value) }
                             )
-                            .transition(.move(edge: .bottom))
+                                .transition(.move(edge: .bottom))
                                 .frame(height: self.modalHeight)
-                            .zIndex(3)
+                                .zIndex(3)
                         }
                     }
                 }
@@ -123,8 +124,19 @@ struct TitleCatalogView: View {
                 animeKind: self.animeKind,
                 animeRating: self.animeRating
             ) {
-                shikimoriApi.getAnimes(params: AnimesParams(limit: 20)) { (animes) in
-                    self.animes = animes;
+                print(self.titleStatus.toString())
+                shikimoriApi.getAnimes(params: AnimesParams(
+                    limit: 20,
+                    status: self.titleStatus.toString(),
+                    kind: self.animeKind.toString(),
+                    rating: self.animeRating.toString()
+                )) { (animers) in
+                    print("\(animers.count)")
+                    animers.forEach { anime in
+                        print(anime.name)
+                    }
+                    self.animes = [];
+                    self.animes = animers
                 }
             }
         }
@@ -136,20 +148,20 @@ struct TitleCatalogView: View {
     }
     
     private func onChangedDragValueGesture(_ value: DragGesture.Value) {
-      guard value.translation.height > 0 else { return }
-      self.offset = value.translation
+        guard value.translation.height > 0 else { return }
+        self.offset = value.translation
     }
-
+    
     private func onEndedDragValueGesture(_ value: DragGesture.Value) {
-      guard value.translation.height >= self.modalHeight / 2 else {
-        self.offset = CGSize.zero
-        return
-      }
-
-      withAnimation {
-        self.isTitleTypeSheetOpen = !self.isTitleTypeSheetOpen
-        self.offset = CGSize.zero
-      }
+        guard value.translation.height >= self.modalHeight / 2 else {
+            self.offset = CGSize.zero
+            return
+        }
+        
+        withAnimation {
+            self.isTitleTypeSheetOpen = !self.isTitleTypeSheetOpen
+            self.offset = CGSize.zero
+        }
     }
 }
 

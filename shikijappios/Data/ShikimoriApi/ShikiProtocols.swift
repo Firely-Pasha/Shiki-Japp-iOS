@@ -18,7 +18,7 @@ protocol Title {
     var status: TitleStatus { get}
 }
 
-protocol Anime: Title {
+protocol Anime: Title, Encodable {
     var kind: AnimeKind { get }
     var episodes: Int { get }
     var episodes_aired: Int? { get }
